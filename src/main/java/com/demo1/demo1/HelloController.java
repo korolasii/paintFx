@@ -2,6 +2,7 @@ package com.demo1.demo1;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -14,10 +15,15 @@ import java.io.IOException;
 
 public class HelloController {
     @FXML
-    private Canvas canvas;
+    public Canvas canvas;
 
-    private GraphicsContext gc;
-    private DrawingData drawingData;
+    public GraphicsContext gc;
+
+    public DrawingData drawingData;
+
+    public Color color = Color.BLACK;
+
+    public int width = 12;
 
     public Canvas getCanvas() {
         return canvas;
@@ -25,7 +31,7 @@ public class HelloController {
 
     public void initialize() {
         gc = canvas.getGraphicsContext2D();
-        gc.setLineWidth(2);
+        gc.setLineWidth(width);
         gc.setStroke(Color.BLACK);
 
         canvas.setOnMousePressed(this::handleMousePressed);
@@ -35,20 +41,39 @@ public class HelloController {
         redraw();
     }
 
+    public void clearCanvas() {
+
+
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+
+
+        drawingData.clearPoints();
+        saveDrawingData();
+    }
+
+    public void clearButtonClicked(ActionEvent actionEvent) {
+        clearCanvas();
+    }
+
     private void handleMousePressed(MouseEvent event) {
+        gc.setStroke(color);
         gc.beginPath();
+        gc.setLineWidth(width);
         gc.lineTo(event.getX(), event.getY());
         gc.stroke();
 
-        drawingData.addPoint(event.getX(), event.getY(), Color.BLACK);
+        drawingData.addPoint(event.getX(), event.getY(), color);
         saveDrawingData();
     }
 
     private void handleMouseDragged(MouseEvent event) {
+        gc.setStroke(color);
+        gc.setLineWidth(width);
         gc.lineTo(event.getX(), event.getY());
         gc.stroke();
 
-        drawingData.addPoint(event.getX(), event.getY(), Color.BLACK);
+
+        drawingData.addPoint(event.getX(), event.getY(), color);
         saveDrawingData();
     }
 
@@ -75,11 +100,50 @@ public class HelloController {
     }
 
     private void redraw() {
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+
         for (PointData point : drawingData.getPoints()) {
+            gc.setStroke(point.getColor());
+            gc.setLineWidth(width);
             gc.beginPath();
             gc.lineTo(point.getX(), point.getY());
-            gc.setStroke(point.getColor());
             gc.stroke();
         }
+    }
+
+    public void eraserButtonClicked(ActionEvent event) {
+        color = Color.WHITE;
+    }
+
+    public void blackButtonClicked(ActionEvent event) {
+        color = Color.BLACK;
+    }
+
+    public void yelllowButtonClicked(ActionEvent event) {
+        color = Color.YELLOW;
+    }
+
+    public void greenButtonClicked(ActionEvent event) {
+        color = Color.GREEN;
+    }
+
+    public void blueButtonClicked(ActionEvent event) {
+        color = Color.BLUE;
+    }
+
+    public void tenButtonClicked(ActionEvent event) {
+        width = 10;
+    }
+
+    public void twelveButtonClicked(ActionEvent event) {
+        width = 12;
+    }
+
+    public void fourteenButtonClicked(ActionEvent event) {
+        width = 14;
+    }
+
+    public void sixteenButtonClicked(ActionEvent event) {
+        width = 16;
     }
 }

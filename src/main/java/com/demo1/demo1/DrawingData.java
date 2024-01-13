@@ -9,7 +9,7 @@ public class DrawingData {
     public List<PointData> points;
 
     public DrawingData() {
-        this.points = new ArrayList<>();
+        points = new ArrayList<>();
     }
 
     public List<PointData> getPoints() {
@@ -18,5 +18,9 @@ public class DrawingData {
 
     public void addPoint(double x, double y, Color color) {
         points.add(new PointData(x, y, color));
+    }
+
+    public void clearPoints() {
+        points.clear();
     }
 }
