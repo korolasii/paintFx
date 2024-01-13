@@ -11,19 +11,29 @@
             <Button fx:id="clear" layoutX="1090.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearButtonClicked" prefHeight="30.0" prefWidth="100.0" text="Clear" />
             <MenuButton fx:id="widthChoose" layoutX="230.0" layoutY="10.0" mnemonicParsing="false" prefWidth="150.0" text="Width">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#tenButtonClicked" text="10px" />
-                  <MenuItem mnemonicParsing="false" onAction="#twelveButtonClicked" text="12px" />
-                  <MenuItem mnemonicParsing="false" onAction="#fourteenButtonClicked" text="14px" />
-                  <MenuItem mnemonicParsing="false" onAction="#sixteenButtonClicked" text="16px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="1px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="2px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="3px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="4px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="5px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="6px" />
+                   <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="8px" />
+                  <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="10px" />
+                  <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="12px" />
+                  <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="14px" />
+                  <MenuItem mnemonicParsing="false" onAction="#widthButtonClicked" text="16px" />
                </items>
             </MenuButton>
             <Button layoutX="170.0" layoutY="10.0" mnemonicParsing="false" onAction="#eraserButtonClicked" prefWidth="50.0" text="Eraser" />
             <MenuButton fx:id="colorChoose" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefWidth="150.0" text="Color">
               <items>
-                <MenuItem mnemonicParsing="false" onAction="#blackButtonClicked" text="Black" />
-                <MenuItem mnemonicParsing="false" onAction="#yelllowButtonClicked" text="Yellow" />
-                 <MenuItem mnemonicParsing="false" onAction="#greenButtonClicked" text="Green" />
-                 <MenuItem mnemonicParsing="false" onAction="#blueButtonClicked" text="Blue" />
+                <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Black" />
+                <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Yellow" />
+                  <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Green" />
+                 <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Blue" />
+                  <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Orange" />
+                  <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Brown" />
+                  <MenuItem mnemonicParsing="false" onAction="#colorButtonClicked" text="Red" />
               </items>
             </MenuButton>
          </children>

@@ -7,8 +7,6 @@
     <list default="true" id="48b2e4dc-a3a4-4909-bc5b-341788b2d59e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/drawingData.json" beforeDir="false" afterPath="$PROJECT_DIR$/drawingData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo1/demo1/DrawingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo1/demo1/DrawingData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo1/demo1/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo1/demo1/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo1/demo1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo1/demo1/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/demo1/demo1/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/demo1/demo1/hello-view.fxml" afterDir="false" />
     </list>

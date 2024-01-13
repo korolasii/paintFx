@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
@@ -115,35 +116,19 @@ public class HelloController {
         color = Color.WHITE;
     }
 
-    public void blackButtonClicked(ActionEvent event) {
-        color = Color.BLACK;
+    public void colorButtonClicked(ActionEvent event) {
+        if (event.getSource() instanceof MenuItem) {
+            MenuItem clickedMenuItem = (MenuItem) event.getSource();
+            String menuItemText = clickedMenuItem.getText();
+            color = Color.valueOf(menuItemText);
+        }
     }
 
-    public void yelllowButtonClicked(ActionEvent event) {
-        color = Color.YELLOW;
-    }
-
-    public void greenButtonClicked(ActionEvent event) {
-        color = Color.GREEN;
-    }
-
-    public void blueButtonClicked(ActionEvent event) {
-        color = Color.BLUE;
-    }
-
-    public void tenButtonClicked(ActionEvent event) {
-        width = 10;
-    }
-
-    public void twelveButtonClicked(ActionEvent event) {
-        width = 12;
-    }
-
-    public void fourteenButtonClicked(ActionEvent event) {
-        width = 14;
-    }
-
-    public void sixteenButtonClicked(ActionEvent event) {
-        width = 16;
+    public void widthButtonClicked(ActionEvent event) {
+        if (event.getSource() instanceof MenuItem) {
+            MenuItem clickedMenuItem = (MenuItem) event.getSource();
+            String menuItemText = clickedMenuItem.getText();
+            width = Integer.parseInt(menuItemText.substring(0, menuItemText.indexOf("p")));
+        }
     }
 }
